@@ -1,12 +1,14 @@
 package local.tylerb.zoo.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import local.tylerb.zoo.logging.Loggable;
 import org.apache.catalina.User;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+@Loggable
 @Entity
 @Table(name = "zooanimals")
 public class ZooAnimals extends Auditable implements Serializable {

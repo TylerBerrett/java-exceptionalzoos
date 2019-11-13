@@ -1,9 +1,11 @@
 package local.tylerb.zoo.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import local.tylerb.zoo.logging.Loggable;
 
 import javax.persistence.*;
 
+@Loggable
 @Entity
 @Table(name = "telephone")
 public class Telephone extends Auditable {

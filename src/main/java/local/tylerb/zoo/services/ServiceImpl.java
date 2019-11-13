@@ -1,5 +1,6 @@
 package local.tylerb.zoo.services;
 
+import local.tylerb.zoo.exceptions.ResourceNotFoundException;
 import local.tylerb.zoo.model.Telephone;
 import local.tylerb.zoo.model.Zoo;
 import local.tylerb.zoo.repo.AnimalRepo;
@@ -29,7 +30,7 @@ public class ServiceImpl implements Service {
 
     @Override
     public Zoo getZooById(long zooid) {
-        return zooRepo.findById(zooid).orElseThrow(() -> new EntityNotFoundException("id: " + zooid + " not found!"));
+        return zooRepo.findById(zooid).orElseThrow(() -> new ResourceNotFoundException("id: " + zooid + " not found!"));
     }
 
     @Override
